@@ -8,6 +8,7 @@ import globals from 'rollup-plugin-node-globals';
 import {terser} from 'rollup-plugin-terser';
 
 import Styles from '../../packages/styles/package.json';
+import Core from '../../packages/core/package.json';
 
 const getConfiguration = (pkg, env, target) => {
   const isProduction = env === 'production';
@@ -98,5 +99,6 @@ const createConfiguration = pkg => {
 };
 
 export default [
-  ...createConfiguration(Styles)
+  ...createConfiguration(Styles),
+  ...createConfiguration(Core),
 ];
