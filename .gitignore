@@ -1,0 +1,16 @@
+/node_modules
+
+.idea
+.vscode
+
+*.log
+.next/
+build/
+dist/
+lib/
+packages/*/yarn.lock
+site/out/
+tmp/
+
+yarn.lock
+package-lock.json
