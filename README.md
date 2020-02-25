@@ -1,1 +1,1 @@
-Emerald UI React component library
+Emblem UI React component library
