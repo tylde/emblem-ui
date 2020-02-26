@@ -1,0 +1,145 @@
+@import "./mixins";
+
+:root {
+  --header-height: 80px;
+  --navigation-width: 240px;
+
+  --z-index-header: 100;
+  --z-index-navigation: 100;
+}
+
+.app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.app-header {
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  z-index: var(--z-index-header);
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08)
+}
+
+.app-logo {
+  max-width: var(--navigation-width);
+}
+
+.app-wrapper {
+  width: 100%;
+  transition: margin-left ease-in-out 150ms;
+
+  margin-top: var(--header-height);
+  overflow-y: scroll;
+  }
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+
+  max-width: calc(1440px - (2 * var(--navigation-width)));
+  min-height: 100%;
+
+  background: #fff;
+  transition: margin-left ease-in-out 150ms;
+
+  @include for-tablet-up {
+    margin-left: var(--navigation-width);
+  }
+
+  @include for-desktop-l-up {
+    margin: 0 auto;
+  }
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  padding: 3.2rem 1.6rem;
+}
+
+.app-navigation {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  max-width: var(--navigation-width);
+  height: 100%;
+  padding: 2.4rem 0;
+
+  overflow: auto;
+
+  margin-top: var(--header-height);
+  margin-left: calc(-1 * var(--navigation-width));
+
+  transition: margin-left ease-in-out 150ms;
+
+  z-index: var(--z-index-navigation);
+
+  @include for-tablet-up {
+    margin-left: 0;
+  }
+
+  @include for-desktop-l-up {
+    left: auto;
+    right: calc(50% + ((1440px - (2 * var(--navigation-width))) / 2));
+  }
+}
+
+.app-navigation-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0 2rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.app-navigation-element {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  height: 3.6rem;
+  padding: 0 2rem;
+  text-decoration: none;
+  color: #000;
+
+  &:hover, &:focus {
+    outline: 0;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+}
+
+.app-footer {
+  position: relative;
+  height: 120px;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #eee;
+  padding: 1.6rem;
+}

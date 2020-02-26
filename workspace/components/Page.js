@@ -2,6 +2,7 @@ import React from 'react';
 
 import Meta from './Meta';
 import Navigation from './Navigation';
+import Header from './Header';
 
 const Page = ({
   children
@@ -9,10 +10,18 @@ const Page = ({
   return (
     <div className='app'>
       <Meta />
+      <Header />
       <Navigation />
-      <main className='app-content'>
-        {children}
-      </main>
+      <div className='app-wrapper'>
+        <div className='app-content'>
+          <main className='app-main'>
+            {children}
+          </main>
+          <footer className='app-footer'>
+            Footer
+          </footer>
+        </div>
+      </div>
     </div>
   );
 };

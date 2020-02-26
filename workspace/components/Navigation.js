@@ -1,17 +1,20 @@
 import React from 'react';
-import Link from 'next/link';
 
-const Navigation = (props) => {
-  return (
-    <nav className='app-navigation'>
-      <div className='app-navigation-element'><Link href='/'><a>Home</a></Link></div>
-      <div className='app-navigation-element'><Link href='/buttons'><a>Buttons</a></Link></div>
-      <div className='app-navigation-element'><Link href='/checkbox'><a>Checkbox</a></Link></div>
-      <div className='app-navigation-element'><Link href='/form'><a>Form</a></Link></div>
-      <div className='app-navigation-element'><Link href='/input'><a>Input</a></Link></div>
-      <div className='app-navigation-element'><Link href='/switch'><a>Switch</a></Link></div>
-    </nav>
-  );
-};
+import NavigationGroup from './NavigationGroup';
+import NavigationElement from './NavigationElement';
+
+const Navigation = () => (
+  <nav className='app-navigation'>
+    <NavigationGroup title='Core'>
+      <NavigationElement href='/buttons'>Button</NavigationElement>
+      <NavigationElement href='/checkbox'>CheckboxBase</NavigationElement>
+      <NavigationElement href='/input'>InputBase</NavigationElement>
+      <NavigationElement href='/switch'>SwitchBase</NavigationElement>
+    </NavigationGroup>
+    <NavigationGroup title='Form'>
+      <NavigationElement href='/form'>Form</NavigationElement>
+    </NavigationGroup>
+  </nav>
+);
 
 export default Navigation;
