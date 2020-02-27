@@ -3,6 +3,10 @@ import React from 'react';
 import Meta from './Meta';
 import Navigation from './Navigation';
 import Header from './Header';
+import Footer from './Footer';
+import Wrapper from './Wrapper';
+import NavigationWrapper from './NavigationWrapper';
+import ContentWrapper from './ContentWrapper';
 
 const Page = ({
   children
@@ -11,17 +15,21 @@ const Page = ({
     <div className='app'>
       <Meta />
       <Header />
-      <Navigation />
-      <div className='app-wrapper'>
-        <div className='app-content'>
-          <main className='app-main'>
-            {children}
-          </main>
-          <footer className='app-footer'>
-            Footer
-          </footer>
-        </div>
-      </div>
+      <Wrapper>
+        <NavigationWrapper>
+          <Navigation />
+        </NavigationWrapper>
+        <ContentWrapper>
+          <div className='app-content'>
+            <main className='app-main'>
+              {children}
+            </main>
+          </div>
+        </ContentWrapper>
+      </Wrapper>
+      <Footer>
+        Footer
+      </Footer>
     </div>
   );
 };

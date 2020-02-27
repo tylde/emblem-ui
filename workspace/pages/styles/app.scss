@@ -2,96 +2,120 @@
 
 :root {
   --header-height: 80px;
-  --navigation-width: 240px;
+  --navigation-width: 220px;
+  --content-width: 1024px;
 
   --z-index-header: 100;
   --z-index-navigation: 100;
 }
 
 .app {
-  display: flex;
   width: 100%;
   height: 100%;
 }
 
 .app-header {
-  position: fixed;
   width: 100%;
   height: var(--header-height);
   z-index: var(--z-index-header);
-  background: #fff;
-  border-bottom: 1px solid #e6e6e6;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.08)
-}
+  background: #23476B;
 
-.app-logo {
-  max-width: var(--navigation-width);
+  position: fixed;
+
+  @include for-tablet-up {
+    position: relative;
+  }
 }
 
 .app-wrapper {
-  width: 100%;
-  transition: margin-left ease-in-out 150ms;
-
-  margin-top: var(--header-height);
-  overflow-y: scroll;
-  }
-
-.app-content {
   display: flex;
-  flex-direction: column;
-
-  max-width: calc(1440px - (2 * var(--navigation-width)));
+  width: 100%;
   min-height: 100%;
-
-  background: #fff;
-  transition: margin-left ease-in-out 150ms;
+  padding-top: var(--header-height);
 
   @include for-tablet-up {
-    margin-left: var(--navigation-width);
+    //min-height: calc(100% - var(--header-height));
+    padding: 0;
   }
+}
 
-  @include for-desktop-l-up {
+.app-footer {
+  position: relative;
+  height: 240px;
+  background: #13293d;
+  color: #fff;
+  width: 100%;
+
+  &__content {
     margin: 0 auto;
+    padding: 1.6rem 3.2rem;
+    height: 100%;
+
+    @include for-desktop-up {
+      max-width: 1024px;
+    }
+  }
+}
+
+.app-navigation-wrapper {
+  min-width: var(--navigation-width);
+  width: calc((100% - var(--content-width)) / 2);
+  padding-left: calc(((100% - var(--content-width)) / 2) - var(--navigation-width));
+
+  margin-left: calc(-1 * var(--navigation-width));
+  background: #fff;
+  transition: margin-left ease-in-out 150ms, background-color ease-in-out 150ms 150ms;
+
+  @include for-tablet-up {
+    margin-left: 0;
+    background: transparent;
+    transition: margin-left ease-in-out 150ms, background-color ease-in-out 150ms;
+  }
+}
+
+.app-content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.app-content {
+  max-width: var(--content-width);
+  min-height: 100%;
+  padding: 0;
+  transition: padding ease-in-out 150ms;
+
+  @include for-tablet-up {
+    padding: 1.6rem;
   }
 }
 
 .app-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex-grow: 1;
+  min-height: 100%;
   padding: 3.2rem 1.6rem;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+  transition: padding ease-in-out 150ms;
+
+  @include for-tablet-up {
+    border-radius: 4px;
+    padding: 1.6rem;
+  }
 }
 
 .app-navigation {
+
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0;
 
   width: 100%;
-  max-width: var(--navigation-width);
   height: 100%;
-  padding: 2.4rem 0;
+  padding: 2.4rem 0 2.4rem 1.6rem;
 
   overflow: auto;
 
-  margin-top: var(--header-height);
-  margin-left: calc(-1 * var(--navigation-width));
-
-  transition: margin-left ease-in-out 150ms;
-
   z-index: var(--z-index-navigation);
-
-  @include for-tablet-up {
-    margin-left: 0;
-  }
-
-  @include for-desktop-l-up {
-    left: auto;
-    right: calc(50% + ((1440px - (2 * var(--navigation-width))) / 2));
-  }
 }
 
 .app-navigation-group {
@@ -123,6 +147,9 @@
   padding: 0 2rem;
   text-decoration: none;
   color: #000;
+  border-radius: 4px;
+  transition: background-color ease-in-out 150ms;
+  margin-bottom: 0.4rem;
 
   &:hover, &:focus {
     outline: 0;
@@ -135,11 +162,3 @@
 
 }
 
-.app-footer {
-  position: relative;
-  height: 120px;
-  bottom: 0;
-  left: 0;
-  border-top: 1px solid #eee;
-  padding: 1.6rem;
-}

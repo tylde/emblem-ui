@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Wrapper = ({children, styles = {}}) => {
-  return (
-    <div style={{...styles, position: 'relative', display: 'flex', margin: 4}}>
-      {children}
-    </div>
-  );
-};
+const Wrapper = ({children}) => (
+  <header className='app-wrapper'>
+    {children}
+  </header>
+);
+
+Wrapper.propTypes = {};
+
+Wrapper.defaultProps = {};
 
 export default Wrapper;
