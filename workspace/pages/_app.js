@@ -4,14 +4,25 @@ import Page from '../components/Page';
 
 import './styles/index.scss';
 import './styles/app.scss';
+import './styles/header.scss';
+import './styles/navigation.scss';
+import './styles/content.scss';
+import './styles/main.scss';
+import './styles/footer.scss';
+
+import '../icons/iconLibrary';
+
+import DarkModeProvider from '../context/darkmode/DarkModeProvider';
 
 class MyApp extends App {
   render() {
     const {Component} = this.props;
     return (
-      <Page>
-        <Component />
-      </Page>
+      <DarkModeProvider>
+        <Page>
+          <Component />
+        </Page>
+      </DarkModeProvider>
     );
   }
 }

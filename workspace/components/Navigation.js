@@ -6,7 +6,7 @@ import NavigationElement from './NavigationElement';
 const Navigation = () => (
   <nav className='app-navigation'>
     <NavigationGroup>
-      <NavigationElement href='/'>Home</NavigationElement>
+      <NavigationElement href='/'>Introduction</NavigationElement>
     </NavigationGroup>
     <NavigationGroup title='Core'>
       <NavigationElement href='/buttons'>Button</NavigationElement>

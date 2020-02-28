@@ -27,9 +27,7 @@ const Page = ({
           </div>
         </ContentWrapper>
       </Wrapper>
-      <Footer>
-        Footer
-      </Footer>
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,30 @@
+@import './mixins';
+
+.app-footer {
+  position: relative;
+  background: #13293d;
+  color: #fff;
+  width: 100%;
+
+  &__content {
+    margin: 0 auto;
+    padding: 1.6rem 3.2rem;
+    height: 100%;
+
+    @include for-desktop-up {
+      max-width: 1024px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__coffee {
+    margin: 0 1.2rem;
+    width: 20px;
+    height: 20px;
+  }
+}

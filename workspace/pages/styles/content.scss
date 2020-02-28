@@ -1,0 +1,18 @@
+@import './mixins';
+
+.app-content-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.app-content {
+  max-width: var(--content-width);
+  min-height: 100%;
+  padding: 0;
+  transition: padding ease-in-out 150ms;
+
+  @include for-tablet-up {
+    padding: 1.6rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "./mixins";
+
+.app-main {
+  min-height: 100%;
+  padding: 3.2rem 1.6rem;
+  background: #fff;
+  border-radius: 0;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+  transition: padding ease-in-out 150ms;
+
+  @include for-tablet-up {
+    border-radius: 4px;
+    padding: 1.6rem;
+  }
+}
