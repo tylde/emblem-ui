@@ -1,14 +1,16 @@
 import React from 'react';
 import App from 'next/app';
-import Page from '../components/Page/Page';
 
 import '../styles/index.scss';
 import '../styles/variables.scss';
 
 import '../icons/iconLibrary';
 
+import Page from '../components/Page/Page';
+
 import AppProvider from '../context/app/AppProvider';
 import DarkModeProvider from '../context/darkmode/DarkModeProvider';
+import RouterProgress from '../components/RouterProgress/RouterProgress';
 
 class MyApp extends App {
   render() {
@@ -16,6 +18,7 @@ class MyApp extends App {
     return (
       <AppProvider>
         <DarkModeProvider>
+          <RouterProgress animationDuration={300} incrementDuration={500} minimum={0.1} />
           <Page>
             <Component />
           </Page>

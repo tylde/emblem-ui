@@ -1,0 +1,16 @@
+.router-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: var(--z-index-router-progress);
+  pointer-events: none;
+
+  &__indicator {
+    width: 0;
+    height: 100%;
+    background: #3498DB;
+    transition: width ease-in-out 250ms;
+  }
+}
