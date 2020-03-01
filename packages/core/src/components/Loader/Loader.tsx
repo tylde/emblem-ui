@@ -6,18 +6,18 @@ import {ElementColor, ElementSize} from '../../interface/element.interface';
 
 interface Loader {
   alternate?: boolean;
-  color?: ElementColor;
+  elementColor?: ElementColor;
   elementSize?: ElementSize;
 }
 
 const Loader: React.FC<Loader> = ({
   alternate = false,
-  color = 'primary',
+  elementColor = 'primary',
   elementSize = 'default'
 }) => {
   const theme: EmblemUITheme = useTheme();
   return (
-    <StyledLoader alternate={alternate} color={color} elementSize={elementSize} theme={theme} />
+    <StyledLoader alternate={alternate} elementColor={elementColor} elementSize={elementSize} theme={theme} />
   );
 };
 

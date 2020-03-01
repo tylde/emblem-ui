@@ -7,7 +7,8 @@ const primary: EmblemUIThemeColor = {
   base: '#3498DB',
   medium: '#3478bb',
   dark: '#21618C',
-  fontColor: '#FFF'
+  fontColor: '#FFF',
+  outlineFontColor: '#3498DB'
 };
 
 export default primary;

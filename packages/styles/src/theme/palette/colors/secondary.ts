@@ -7,7 +7,8 @@ const secondary: EmblemUIThemeColor = {
   base: '#565D65',
   medium: '#444b53',
   dark: '#363c44',
-  fontColor: '#FFF'
+  fontColor: '#FFF',
+  outlineFontColor: '#565D65'
 };
 
 export default secondary;

@@ -24,7 +24,6 @@ export interface EmblemUITheme {
   button: EmblemUIThemeButtonStyles;
   checkbox: EmblemUIThemeCheckboxStyles;
   disabled: {color: string, background: string, border: string};
-  globalStyle: string,
   input: EmblemUIThemeInputStyles;
   loader: EmblemUIThemeLoaderStyles;
   palette: EmblemUIThemePalette;
