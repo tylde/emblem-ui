@@ -1,153 +1,148 @@
 import React from 'react';
 import {Button, ButtonGroup} from '@emblem-ui/core';
 
-import Wrapper from '../components/Wrapper';
+import ElementWrapper from '../components/ElementWrapper';
 
 const buttons = () => {
   const types = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'dark'];
 
   return (
     <div>
-      <Wrapper>
-        <div style={{backgroundColor: '#eee', width: 200, height: 200, padding: 10}}>
-          <Button elementColor='primary'>Shadow test</Button>
-        </div>
-      </Wrapper>
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementSize='small'>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementSize='default'>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementSize='large'>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} loading>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementStyle='outline'>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementStyle='outline' loading>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementStyle='dashed'>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementStyle='dashed' loading>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementStyle='subtle'>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} elementStyle='subtle' loading>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} disabled>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
-            <Wrapper key={type}>
+            <ElementWrapper key={type}>
               <Button elementColor={type} disabled loading>{text}</Button>
-            </Wrapper>
+            </ElementWrapper>
           );
         })}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => (
-          <Wrapper key={type}>
+          <ElementWrapper key={type}>
             <ButtonGroup direction='vertical'>
               <Button elementColor={type}>Text 1</Button>
               <Button elementColor={type}>Text 2</Button>
@@ -155,13 +150,13 @@ const buttons = () => {
               <Button elementColor={type}>Text 4</Button>
               <Button elementColor={type}>Text 5</Button>
             </ButtonGroup>
-          </Wrapper>
+          </ElementWrapper>
         ))}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper>
+      <ElementWrapper>
         {types.map((type) => (
-          <Wrapper key={type}>
+          <ElementWrapper key={type}>
             <ButtonGroup direction='vertical'>
               <Button elementColor={type} elementStyle='outline'>Text 1</Button>
               <Button elementColor={type} elementStyle='outline'>Text 2</Button>
@@ -169,13 +164,13 @@ const buttons = () => {
               <Button elementColor={type} elementStyle='outline'>Text 4</Button>
               <Button elementColor={type} elementStyle='outline'>Text 5</Button>
             </ButtonGroup>
-          </Wrapper>
+          </ElementWrapper>
         ))}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper styles={{flexDirection: 'column'}}>
+      <ElementWrapper styles={{flexDirection: 'column'}}>
         {types.map((type) => (
-          <Wrapper key={type}>
+          <ElementWrapper key={type}>
             <ButtonGroup>
               <Button elementColor={type}>Text 1</Button>
               <Button elementColor={type}>Text 2</Button>
@@ -183,13 +178,13 @@ const buttons = () => {
               <Button elementColor={type}>Text 4</Button>
               <Button elementColor={type}>Text 5</Button>
             </ButtonGroup>
-          </Wrapper>
+          </ElementWrapper>
         ))}
-      </Wrapper>
+      </ElementWrapper>
 
-      <Wrapper styles={{flexDirection: 'column'}}>
+      <ElementWrapper styles={{flexDirection: 'column'}}>
         {types.map((type) => (
-          <Wrapper key={type}>
+          <ElementWrapper key={type}>
             <ButtonGroup>
               <Button elementColor={type} elementStyle='outline'>Text 1</Button>
               <Button elementColor={type} elementStyle='outline'>Text 2</Button>
@@ -197,9 +192,9 @@ const buttons = () => {
               <Button elementColor={type} elementStyle='outline'>Text 4</Button>
               <Button elementColor={type} elementStyle='outline'>Text 5</Button>
             </ButtonGroup>
-          </Wrapper>
+          </ElementWrapper>
         ))}
-      </Wrapper>
+      </ElementWrapper>
     </div>
   );
 };
