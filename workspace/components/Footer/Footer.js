@@ -1,6 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
+import './Footer.scss';
+
 const Footer = ({footerRef}) => (
   <footer className='app-footer' ref={footerRef}>
     <div className='app-footer__content'>

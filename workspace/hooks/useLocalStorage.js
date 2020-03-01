@@ -4,7 +4,7 @@ const getStoredValue = (key, initialValue) => {
   try {
     const item = window.localStorage.getItem(key);
     if (typeof item === 'string') {
-      return JSON.parse(item)
+      return JSON.parse(item);
     }
     return initialValue;
   } catch (error) {

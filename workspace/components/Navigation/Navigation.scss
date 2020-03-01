@@ -1,4 +1,4 @@
-@import './mixins';
+@import '../../styles/mixins';
 
 .app-navigation-wrapper {
   min-width: var(--navigation-width);
@@ -31,31 +31,6 @@
   user-select: none;
 
   z-index: var(--z-index-navigation);
-
-  &::-webkit-scrollbar {
-    width: 5px;
-  }
-}
-
-.app-navigation-header {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  top: var(--header-height);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-
-  padding: 1.6rem;
-
-  z-index: var( --z-index-navigation-header);
-
-  overflow: auto;
-
-  @include for-tablet-up {
-    display: none;
-  }
 
   &::-webkit-scrollbar {
     width: 5px;

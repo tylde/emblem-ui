@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Wrapper.scss';
+
 const Wrapper = ({children}) => (
   <header className='app-wrapper'>
     {children}

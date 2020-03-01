@@ -1,13 +1,17 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
-import Meta from './Meta';
-import Navigation from './Navigation/Navigation';
-import Header from './Header/Header';
-import Footer from './Footer';
-import Wrapper from './Wrapper';
-import NavigationWrapper from './Navigation/NavigationWrapper';
+import './Page.scss';
+
 import ContentWrapper from './ContentWrapper';
-import useApp from '../hooks/useApp';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import Main from './Main';
+import Meta from './Meta';
+import Navigation from '../Navigation/Navigation';
+import NavigationWrapper from '../Navigation/NavigationWrapper';
+import Wrapper from './Wrapper';
+
+import useApp from '../../hooks/useApp';
 
 const Page = ({
   children
@@ -52,11 +56,9 @@ const Page = ({
           <Navigation navigationTop={navigationTop} navigationBottom={navigationBottom} />
         </NavigationWrapper>
         <ContentWrapper>
-          <div className='app-content'>
-            <main className='app-main'>
-              {children}
-            </main>
-          </div>
+          <Main>
+            {children}
+          </Main>
         </ContentWrapper>
       </Wrapper>
       <Footer footerRef={footerRef} />

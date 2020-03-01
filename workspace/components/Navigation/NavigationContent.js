@@ -1,6 +1,7 @@
 import React from 'react';
-import NavigationGroup from './NavigationGroup';
+
 import NavigationElement from './NavigationElement';
+import NavigationGroup from './NavigationGroup';
 
 const NavigationContent = () => (
   <>

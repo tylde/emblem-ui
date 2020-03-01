@@ -1,19 +1,19 @@
 import React from 'react';
 
-import NavigationContent from './NavigationContent';
+import NavigationContent from '../Navigation/NavigationContent';
 import useApp from '../../hooks/useApp';
 
-const NavigationHeader = () => {
+const HeaderNavigation = () => {
   const {isMenuOpened} = useApp();
 
   if (!isMenuOpened) {
     return null;
   }
   return (
-    <nav className='app-navigation-header'>
+    <nav className='app-header__navigation'>
       <NavigationContent />
     </nav>
   );
 };
 
-export default NavigationHeader;
+export default HeaderNavigation;

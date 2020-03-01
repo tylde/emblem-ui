@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+
 import useApp from '../../hooks/useApp';
 
 const NavigationElement = ({
@@ -8,8 +9,8 @@ const NavigationElement = ({
   href
 }) => {
   const router = useRouter();
-  const isActive = router.pathname === href;
   const {setIsMenuOpen} = useApp();
+  const isActive = router.pathname === href;
   return (
     <Link href={href}>
       <button

@@ -1,5 +1,7 @@
 import React, {useMemo} from 'react';
 
+import './Navigation.scss';
+
 import NavigationContent from './NavigationContent';
 
 const Navigation = ({navigationTop, navigationBottom}) => {

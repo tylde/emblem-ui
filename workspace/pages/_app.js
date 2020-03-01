@@ -1,14 +1,9 @@
 import React from 'react';
 import App from 'next/app';
-import Page from '../components/Page';
+import Page from '../components/Page/Page';
 
-import './styles/index.scss';
-import './styles/app.scss';
-import './styles/header.scss';
-import './styles/navigation.scss';
-import './styles/content.scss';
-import './styles/main.scss';
-import './styles/footer.scss';
+import '../styles/index.scss';
+import '../styles/variables.scss';
 
 import '../icons/iconLibrary';
 
