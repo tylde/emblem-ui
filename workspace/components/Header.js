@@ -7,23 +7,25 @@ import HeaderDarkMode from './HeaderDarkMode';
 const Header = () => (
   <header className='app-header'>
     <div className='app-header__wrapper'>
-      <div className='app-header__left-wrapper'>
-
-      </div>
+      <div className='app-header__left-wrapper' />
       <div className='app-header__content-wrapper'>
         <div className='app-header__content'>
           <div>
             <div className='app-header__menu'>
-              <FontAwesomeIcon icon='bars'  />
+              <Button elementColor='dark' elementStyle='subtle' onClick={() => {}} elementSize='large'>
+                <div className='app-header__icon'>
+                  <FontAwesomeIcon icon='bars' />
+                </div>
+              </Button>
             </div>
           </div>
           <div className='app-header__content__right'>
             <HeaderDarkMode />
             <div className='app-header__content__links'>
               <a href='https://github.com/tylde/emblem-ui' target='_blank' rel='noopener noreferrer'>
-                <Button color='secondary' outline>
-                  <div style={{width: 18, height: 18}}>
-                    <FontAwesomeIcon icon={['fab', 'github']}  />
+                <Button elementColor='dark' elementStyle='subtle' elementSize='large'>
+                  <div className='app-header__icon'>
+                    <FontAwesomeIcon icon={['fab', 'github']} />
                   </div>
                 </Button>
               </a>
@@ -31,7 +33,7 @@ const Header = () => (
           </div>
         </div>
         <div className='app-header__logo'>
-          <FontAwesomeIcon icon='shield-alt'  />
+          <FontAwesomeIcon icon='shield-alt' />
         </div>
       </div>
     </div>

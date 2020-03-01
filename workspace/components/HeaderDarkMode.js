@@ -1,19 +1,22 @@
 import React from 'react';
+import {Button} from '@emblem-ui/core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import {Switch} from '@emblem-ui/form';
 import useDarkMode from '../hooks/useDarkMode';
 
-const HeaderDarkMode = (props) => {
+const HeaderDarkMode = () => {
   const {darkMode, setDarkMode} = useDarkMode();
+
+  const icon = darkMode
+    ? <FontAwesomeIcon icon={['far', 'sun']} />
+    : <FontAwesomeIcon icon={['far', 'moon']} />;
   return (
-    <div className='app-header__content__mode'>
-      <Switch
-        checked={darkMode}
-        checkedIcon='none'
-        componentId='dark-mode'
-        elementColor='dark'
-        onChange={() => setDarkMode(!darkMode)}
-      />
+    <div className='app-header__dark-mode'>
+      <Button elementColor='dark' elementStyle='subtle' onClick={() => setDarkMode(!darkMode)} elementSize='large'>
+        <div className='app-header__icon'>
+          {icon}
+        </div>
+      </Button>
     </div>
   );
 };

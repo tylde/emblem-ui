@@ -55,9 +55,6 @@
   }
 
   &__menu {
-    width: 24px;
-    height: 24px;
-    color: #444;
 
     @include for-tablet-up {
       display: none;
@@ -85,19 +82,17 @@
 
     &__right {
       display: flex;
+      align-items: center;
+
       & > *:not(:last-child) {
-        margin-right: 1.6rem;
+        margin-right: 0.8rem;
       }
     }
 
-    &__mode, &__links {
+    &__links {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    &__mode {
-
     }
 
     &__links {
@@ -105,5 +100,18 @@
 
       }
     }
+  }
+
+  &__dark-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //width: 2.4rem;
+    //height: 2.4rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
   }
 }

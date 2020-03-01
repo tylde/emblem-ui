@@ -17,9 +17,7 @@ const Navigation = () => (
     <NavigationGroup title='Form'>
       <NavigationElement href='/form'>Form</NavigationElement>
     </NavigationGroup>
-    <NavigationGroup title='Data'>
-
-    </NavigationGroup>
+    <NavigationGroup title='Data' />
     <NavigationGroup title='Styles'>
       <NavigationElement href='/theme'>Theme</NavigationElement>
     </NavigationGroup>

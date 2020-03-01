@@ -4,6 +4,11 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
+  faMoon,
+  faSun
+} from '@fortawesome/free-regular-svg-icons';
+
+import {
   faBars,
   faCoffee,
   faShieldAlt
@@ -13,5 +18,7 @@ library.add(
   faBars,
   faCoffee,
   faGithub,
-  faShieldAlt
+  faMoon,
+  faShieldAlt,
+  faSun
 );
