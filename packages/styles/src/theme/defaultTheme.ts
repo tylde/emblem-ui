@@ -13,11 +13,6 @@ const defaultTheme: EmblemUITheme = {
   checkbox: {
     base: '18px'
   },
-  globalStyle: `
-    *, &, &::before, &::after {
-    box-sizing: border-box;
-  }
-  `,
   border: {
     color: '#bdc3c7',
     hover: '#777',

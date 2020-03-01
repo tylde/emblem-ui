@@ -43,7 +43,10 @@ const switchBulletDimensions = css<CheckboxElementTheme>`
 interface CheckboxComponent extends CheckboxElementTheme {}
 
 export const CheckboxComponent = styled.span<CheckboxComponent>`
-  ${(props: CheckboxComponent) => props.theme.globalStyle};
+  *, &, &::before, &::after {
+    box-sizing: border-box;
+  }
+
   ${checkboxDimensions};
   display: inline-flex;
   flex-shrink: 0;
@@ -54,7 +57,10 @@ export const CheckboxComponent = styled.span<CheckboxComponent>`
 interface SwitchComponent extends CheckboxElementTheme {}
 
 export const SwitchComponent = styled.span<SwitchComponent>`
-  ${(props: SwitchComponent) => props.theme.globalStyle};
+  *, &, &::before, &::after {
+    box-sizing: border-box;
+  }
+
   ${switchDimensions};
   display: inline-flex;
   flex-shrink: 0;

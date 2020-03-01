@@ -8,6 +8,10 @@ interface StyledLabel {
 }
 
 export const StyledLabel = styled.label<StyledLabel>`
+  *, &, &::before, &::after {
+    box-sizing: border-box;
+  }
+
   display: ${(props: StyledLabel) => props.block && 'flex'};
   flex-direction: ${(props: StyledLabel) => props.block && 'column'};
 

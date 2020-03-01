@@ -3,42 +3,42 @@ import {EmblemUITheme, useTheme} from '@emblem-ui/styles';
 
 import Loader from '../Loader/Loader';
 import {StyledButton, StyledChildren} from './Button.styles';
-import {ElementColor, ElementSize} from '../../interface/element.interface';
+import {ButtonStyle, ElementColor, ElementSize} from '../../interface/element.interface';
 
 interface Button extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  color?: ElementColor;
+  elementStyle?: ButtonStyle;
+  elementColor?: ElementColor;
   elementSize?: ElementSize;
-  isDisabled?: boolean;
-  isLoading?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
   outline?: boolean;
 }
 
 const Button: React.FC<Button> = ({
   children,
-  color = 'primary',
+  elementStyle = 'default',
+  elementColor = 'primary',
   elementSize = 'default',
-  isDisabled = false,
-  isLoading = false,
-  outline = false,
+  disabled = false,
+  loading = false,
   ...otherProps
 }) => {
   const theme: EmblemUITheme = useTheme();
   return (
     <StyledButton
-      color={color}
-      disabled={isDisabled || isLoading}
-      isDisabled={isDisabled}
-      isLoading={isLoading}
-      outline={outline}
+      disabled={disabled || loading}
+      elementColor={elementColor}
       elementSize={elementSize}
+      elementStyle={elementStyle}
+      loading={loading}
       theme={theme}
       {...otherProps}
     >
-      <StyledChildren isLoading={isLoading}>
+      <StyledChildren isLoading={loading}>
         {children}
       </StyledChildren>
-      {isLoading && <Loader color={color} elementSize='small' alternate={!outline} />}
+      {loading && <Loader elementColor={elementColor} elementSize='small' alternate={elementStyle === 'default'} />}
     </StyledButton>
   );
 };

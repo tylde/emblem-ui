@@ -3,13 +3,15 @@ import {EmblemUITheme} from '@emblem-ui/styles';
 
 interface StyledLoader {
   readonly alternate: boolean;
-  readonly color: string;
+  readonly elementColor: string;
   readonly elementSize: string;
   readonly theme: EmblemUITheme;
 }
 
 export const StyledLoader = styled.div<StyledLoader>`
-  ${(props: StyledLoader) => props.theme.globalStyle}
+  *, &, &::before, &::after {
+    box-sizing: border-box;
+  }
   
   &::before {
     animation: loaderAnimation 1s linear infinite;
@@ -28,11 +30,11 @@ export const StyledLoader = styled.div<StyledLoader>`
     border-width: 2px;
     border-style: solid;
 
-    border-color: ${(props: StyledLoader) => props.theme.palette[props.color].lightest};
-    border-color: ${(props: StyledLoader) => props.alternate && props.theme.palette[props.color].light};
+    border-color: ${(props: StyledLoader) => props.theme.palette[props.elementColor].lightest};
+    border-color: ${(props: StyledLoader) => props.alternate && props.theme.palette[props.elementColor].light};
     
-    border-top-color: ${(props: StyledLoader) => props.theme.palette[props.color].base};
-    border-top-color: ${(props: StyledLoader) => props.alternate && props.theme.palette[props.color].medium};
+    border-top-color: ${(props: StyledLoader) => props.theme.palette[props.elementColor].base};
+    border-top-color: ${(props: StyledLoader) => props.alternate && props.theme.palette[props.elementColor].medium};
   }
   
   @keyframes loaderAnimation {

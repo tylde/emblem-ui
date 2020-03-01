@@ -6,6 +6,7 @@ export interface EmblemUIThemeColor {
   medium: string;
   dark: string;
   fontColor: string;
+  outlineFontColor: string;
 }
 
 export interface EmblemUIThemePalette {
