@@ -7,7 +7,9 @@ interface StyledButtonGroup {
 }
 
 export const StyledButtonGroup = styled.div<StyledButtonGroup>`
-  ${(props: StyledButtonGroup) => props.theme.globalStyle};
+  *, &, &::before, &::after {
+    box-sizing: border-box;
+  }
   
   display: flex;
   flex-direction: ${(props: StyledButtonGroup) => props.direction === 'horizontal' && 'row'};

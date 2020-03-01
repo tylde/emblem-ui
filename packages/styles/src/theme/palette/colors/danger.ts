@@ -7,7 +7,8 @@ const danger: EmblemUIThemeColor = {
   base: '#E74C3C',
   medium: '#c24335',
   dark: '#943126',
-  fontColor: '#FFF'
+  fontColor: '#FFF',
+  outlineFontColor: '#E74C3C'
 };
 
 export default danger;

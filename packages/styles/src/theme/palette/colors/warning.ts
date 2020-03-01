@@ -7,7 +7,8 @@ const warning: EmblemUIThemeColor = {
   base: '#F39C12',
   medium: '#cc7f10',
   dark: '#b96d10',
-  fontColor: '#FFF'
+  fontColor: '#FFF',
+  outlineFontColor: '#F39C12'
 };
 
 export default warning;

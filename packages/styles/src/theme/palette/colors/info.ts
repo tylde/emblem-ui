@@ -7,7 +7,8 @@ const info: EmblemUIThemeColor = {
   base: '#16A085',
   medium: '#13866e',
   dark: '#0E6655',
-  fontColor: '#FFF'
+  fontColor: '#FFF',
+  outlineFontColor: '#16A085'
 };
 
 export default info;
