@@ -5,13 +5,15 @@
   --navigation-width: 220px;
   --content-width: 1024px;
 
-  --z-index-header: 100;
+  --z-index-header: 150;
   --z-index-navigation: 100;
+  --z-index-navigation-header: 150;
 }
 
 .app {
   width: 100%;
   height: 100%;
+  overflow: auto;
 }
 
 .app-wrapper {
@@ -21,7 +23,6 @@
   padding-top: var(--header-height);
 
   @include for-tablet-up {
-    //min-height: calc(100% - var(--header-height));
     padding: 0;
   }
 }

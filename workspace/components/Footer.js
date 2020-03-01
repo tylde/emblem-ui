@@ -1,8 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-const Footer = () => (
-  <footer className='app-footer'>
+const Footer = ({footerRef}) => (
+  <footer className='app-footer' ref={footerRef}>
     <div className='app-footer__content'>
       <div className='app-footer__author'>
         <span>Made with </span>

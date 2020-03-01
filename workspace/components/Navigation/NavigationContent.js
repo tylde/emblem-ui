@@ -1,10 +1,9 @@
 import React from 'react';
-
 import NavigationGroup from './NavigationGroup';
 import NavigationElement from './NavigationElement';
 
-const Navigation = () => (
-  <nav className='app-navigation'>
+const NavigationContent = () => (
+  <>
     <NavigationGroup>
       <NavigationElement href='/'>Introduction</NavigationElement>
     </NavigationGroup>
@@ -21,7 +20,7 @@ const Navigation = () => (
     <NavigationGroup title='Styles'>
       <NavigationElement href='/theme'>Theme</NavigationElement>
     </NavigationGroup>
-  </nav>
+  </>
 );
 
-export default Navigation;
+export default NavigationContent;

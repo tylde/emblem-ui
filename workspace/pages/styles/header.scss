@@ -4,7 +4,6 @@
   width: 100%;
   height: var(--header-height);
   z-index: var(--z-index-header);
-  //background: #23476B;
 
   background: #fff;
   border-bottom: 1px solid #dedede;
@@ -45,16 +44,13 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    //color: #d0dee8;
-    //color: #E74C3C;
-    //color: #444;
     color: #13293D;
     left: 50%;
     margin-left: -20px;
 
   }
 
-  &__menu {
+  &__menu-button {
 
     @include for-tablet-up {
       display: none;

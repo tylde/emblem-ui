@@ -12,17 +12,20 @@ import './styles/footer.scss';
 
 import '../icons/iconLibrary';
 
+import AppProvider from '../context/app/AppProvider';
 import DarkModeProvider from '../context/darkmode/DarkModeProvider';
 
 class MyApp extends App {
   render() {
     const {Component} = this.props;
     return (
-      <DarkModeProvider>
-        <Page>
-          <Component />
-        </Page>
-      </DarkModeProvider>
+      <AppProvider>
+        <DarkModeProvider>
+          <Page>
+            <Component />
+          </Page>
+        </DarkModeProvider>
+      </AppProvider>
     );
   }
 }

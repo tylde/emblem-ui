@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
+import useApp from '../../hooks/useApp';
 
 const NavigationElement = ({
   children,
@@ -8,11 +9,17 @@ const NavigationElement = ({
 }) => {
   const router = useRouter();
   const isActive = router.pathname === href;
+  const {setIsMenuOpen} = useApp();
   return (
     <Link href={href}>
-      <a className={`app-navigation-element ${isActive && 'active'}`.trim()} tabIndex={isActive ? -1 : 0}>
+      <button
+        type='button'
+        className={`app-navigation-element ${isActive ? 'active' : 'inactive'}`.trim()}
+        tabIndex={isActive ? -1 : 0}
+        onClick={() => setIsMenuOpen(false)}
+      >
         {children}
-      </a>
+      </button>
     </Link>
   );
 };

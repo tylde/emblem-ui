@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from '@emblem-ui/core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import useDarkMode from '../hooks/useDarkMode';
+import useDarkMode from '../../hooks/useDarkMode';
 
 const HeaderDarkMode = () => {
   const {darkMode, setDarkMode} = useDarkMode();

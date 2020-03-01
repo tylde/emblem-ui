@@ -9,11 +9,6 @@ const buttons = () => {
   return (
     <div>
       <ElementWrapper>
-        <div style={{backgroundColor: '#eee', width: 200, height: 200, padding: 10}}>
-          <Button elementColor='primary'>Shadow test</Button>
-        </div>
-      </ElementWrapper>
-      <ElementWrapper>
         {types.map((type) => {
           const text = type.replace(/^\w/, (c) => c.toUpperCase());
           return (
