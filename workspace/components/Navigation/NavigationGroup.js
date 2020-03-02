@@ -1,13 +1,15 @@
 import React from 'react';
 
+import {StyledNavigationGroup, StyledNavigationGroupTitle} from './Navigation.styles';
+
 const NavigationGroup = ({
   children,
   title
 }) => (
-  <div className='app-navigation-group'>
-    {title && <div className='app-navigation-group__title'>{title}</div>}
+  <StyledNavigationGroup>
+    {title && <StyledNavigationGroupTitle>{title}</StyledNavigationGroupTitle>}
     {children}
-  </div>
+  </StyledNavigationGroup>
 );
 
 NavigationGroup.propTypes = {};

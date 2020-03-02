@@ -1,20 +1,20 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import './Footer.scss';
+import {StyledFooter, StyledFooterAuthor, StyledFooterContent} from './Footer.styles';
 
 const Footer = ({footerRef}) => (
-  <footer className='app-footer' ref={footerRef}>
-    <div className='app-footer__content'>
-      <div className='app-footer__author'>
+  <StyledFooter ref={footerRef}>
+    <StyledFooterContent>
+      <StyledFooterAuthor>
         <span>Made with </span>
-        <div className='app-footer__coffee'>
+        <div>
           <FontAwesomeIcon icon='coffee' />
         </div>
         <span>by Mateusz Kalinowski</span>
-      </div>
-    </div>
-  </footer>
+      </StyledFooterAuthor>
+    </StyledFooterContent>
+  </StyledFooter>
 );
 
 Footer.propTypes = {};

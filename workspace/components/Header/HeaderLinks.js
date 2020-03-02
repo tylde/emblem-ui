@@ -2,16 +2,18 @@ import React from 'react';
 import {Button} from '@emblem-ui/core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
+import {StyledHeaderIcon, StyledHeaderLinks} from './Header.styles';
+
 const HeaderLinks = () => (
-  <div className='app-header__content__links'>
+  <StyledHeaderLinks>
     <a href='https://github.com/tylde/emblem-ui' target='_blank' rel='noopener noreferrer'>
       <Button elementColor='dark' elementStyle='subtle' elementSize='large'>
-        <div className='app-header__icon'>
+        <StyledHeaderIcon>
           <FontAwesomeIcon icon={['fab', 'github']} />
-        </div>
+        </StyledHeaderIcon>
       </Button>
     </a>
-  </div>
+  </StyledHeaderLinks>
 );
 
 HeaderLinks.propTypes = {};

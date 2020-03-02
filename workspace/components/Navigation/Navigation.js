@@ -1,19 +1,13 @@
-import React, {useMemo} from 'react';
-
-import './Navigation.scss';
+import React from 'react';
 
 import NavigationContent from './NavigationContent';
 
-const Navigation = ({navigationTop, navigationBottom}) => {
-  const navigationStyle = useMemo(
-    () => ({top: navigationTop, bottom: navigationBottom}),
-    [navigationTop, navigationBottom]
-  );
-  return (
-    <nav className='app-navigation' style={navigationStyle}>
-      <NavigationContent />
-    </nav>
-  );
-};
+import {StyledNavigation} from './Navigation.styles';
+
+const Navigation = ({navigationTop, navigationBottom}) => (
+  <StyledNavigation top={navigationTop} bottom={navigationBottom}>
+    <NavigationContent />
+  </StyledNavigation>
+);
 
 export default Navigation;

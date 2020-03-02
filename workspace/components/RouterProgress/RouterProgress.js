@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Router from 'next/router';
 import {useNProgress} from '@tanem/react-nprogress';
 
-import './RouterProgress.scss';
-
 import RouterProgressBar from './RouterProgressBar';
 
 const RouterProgress = ({

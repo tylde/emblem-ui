@@ -4,6 +4,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import useDarkMode from '../../hooks/useDarkMode';
 
+import {StyledHeaderDarkMode, StyledHeaderIcon} from './Header.styles';
+
 const HeaderDarkMode = () => {
   const {darkMode, setDarkMode} = useDarkMode();
 
@@ -11,13 +13,13 @@ const HeaderDarkMode = () => {
     ? <FontAwesomeIcon icon={['far', 'sun']} />
     : <FontAwesomeIcon icon={['far', 'moon']} />;
   return (
-    <div className='app-header__dark-mode'>
+    <StyledHeaderDarkMode>
       <Button elementColor='dark' elementStyle='subtle' onClick={() => setDarkMode(!darkMode)} elementSize='large'>
-        <div className='app-header__icon'>
+        <StyledHeaderIcon>
           {icon}
-        </div>
+        </StyledHeaderIcon>
       </Button>
-    </div>
+    </StyledHeaderDarkMode>
   );
 };
 

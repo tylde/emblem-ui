@@ -1,9 +1,11 @@
 import React from 'react';
 
+import {StyledHeaderContentContainer} from './Header.styles';
+
 const HeaderContentContainer = ({children}) => (
-  <div className='app-header__content__container'>
+  <StyledHeaderContentContainer>
     {children}
-  </div>
+  </StyledHeaderContentContainer>
 );
 
 export default HeaderContentContainer;

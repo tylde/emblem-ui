@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 
 import useApp from '../../hooks/useApp';
+import {StyledNavigationElement} from './Navigation.styles';
 
 const NavigationElement = ({
   children,
@@ -13,14 +14,14 @@ const NavigationElement = ({
   const isActive = router.pathname === href;
   return (
     <Link href={href}>
-      <button
+      <StyledNavigationElement
         type='button'
-        className={`app-navigation-element ${isActive ? 'active' : 'inactive'}`.trim()}
+        isActive={isActive}
         tabIndex={isActive ? -1 : 0}
         onClick={() => setIsMenuOpen(false)}
       >
         {children}
-      </button>
+      </StyledNavigationElement>
     </Link>
   );
 };

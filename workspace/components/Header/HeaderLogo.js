@@ -1,10 +1,12 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
+import {StyledHeaderLogo} from './Header.styles';
+
 const HeaderLogo = () => (
-  <div className='app-header__logo'>
+  <StyledHeaderLogo>
     <FontAwesomeIcon icon='shield-alt' />
-  </div>
+  </StyledHeaderLogo>
 );
 
 export default HeaderLogo;

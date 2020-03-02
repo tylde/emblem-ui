@@ -6,6 +6,12 @@ import loader from './element/loader';
 import palette from './palette/palette';
 
 const defaultTheme: EmblemUITheme = {
+  app: {
+    background: {
+      primary: '#fff',
+      secondary: '#eff2f6'
+    }
+  },
   boxShadow: {
     radius: '2px',
     width: '2px'

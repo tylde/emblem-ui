@@ -1,6 +1,6 @@
-import React, {useEffect, useMemo, useRef, useState} from 'react';
-
-import './Page.scss';
+import React, {useEffect, useRef, useState} from 'react';
+import styled from 'styled-components';
+import {useTheme} from '@emblem-ui/styles';
 
 import ContentWrapper from './ContentWrapper';
 import Footer from '../Footer/Footer';
@@ -13,11 +13,20 @@ import Wrapper from './Wrapper';
 
 import useApp from '../../hooks/useApp';
 
+const StyledPage = styled.div`
+  width: 100%;
+  height: 100%;
+  overflow: ${(props) => (props.isMenuOpened ? 'hidden' : 'auto')};
+  background: ${(props) => props.theme.app.background.secondary};
+`;
+
 const Page = ({
   children
 }) => {
   const [navigationTop, setNavigationTop] = useState(0);
   const [navigationBottom, setNavigationBottom] = useState(0);
+
+  const theme = useTheme();
 
   const {isMenuOpened} = useApp();
 
@@ -45,10 +54,9 @@ const Page = ({
     calculateNavigationPosition();
   }, []);
 
-  const appStyle = useMemo(() => ({overflow: isMenuOpened ? 'hidden' : 'auto'}), [isMenuOpened]);
 
   return (
-    <div className='app' ref={appRef} onScroll={handlePageScroll} style={appStyle}>
+    <StyledPage ref={appRef} onScroll={handlePageScroll} isMenuOpened={isMenuOpened} theme={theme}>
       <Meta />
       <Header headerRef={headerRef} />
       <Wrapper>
@@ -62,7 +70,7 @@ const Page = ({
         </ContentWrapper>
       </Wrapper>
       <Footer footerRef={footerRef} />
-    </div>
+    </StyledPage>
   );
 };
 

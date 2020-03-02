@@ -1,13 +1,15 @@
 import React from 'react';
+import {useTheme} from '@emblem-ui/styles';
 
-const NavigationWrapper = ({children}) => (
-  <div className='app-navigation-wrapper'>
-    {children}
-  </div>
-);
+import {StyledNavigationWraper} from './Navigation.styles';
 
-NavigationWrapper.propTypes = {};
-
-NavigationWrapper.defaultProps = {};
+const NavigationWrapper = ({children}) => {
+  const theme = useTheme();
+  return (
+    <StyledNavigationWraper theme={theme}>
+      {children}
+    </StyledNavigationWraper>
+  );
+};
 
 export default NavigationWrapper;

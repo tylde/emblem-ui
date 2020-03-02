@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './Header.scss';
+import {useTheme} from '@emblem-ui/styles';
 
 import HeaderContentContainer from './HeaderContentContainer';
 import HeaderDarkMode from './HeaderDarkMode';
@@ -9,25 +8,36 @@ import HeaderLogo from './HeaderLogo';
 import HeaderMenuButton from './HeaderMenuButton';
 import HeaderNavigation from './HeaderNavigation';
 
-const Header = ({headerRef}) => (
-  <header className='app-header' ref={headerRef}>
-    <HeaderNavigation />
-    <div className='app-header__wrapper'>
-      <div className='app-header__left-wrapper' />
-      <div className='app-header__content-wrapper'>
-        <div className='app-header__content'>
-          <HeaderContentContainer>
-            <HeaderMenuButton />
-          </HeaderContentContainer>
-          <HeaderContentContainer>
-            <HeaderDarkMode />
-            <HeaderLinks />
-          </HeaderContentContainer>
-        </div>
-        <HeaderLogo />
-      </div>
-    </div>
-  </header>
-);
+import {
+  StyledHeader,
+  StyledHeaderContent,
+  StyledHeaderContentWrapper,
+  StyledHeaderLeftWrapper,
+  StyledHeaderWrapper
+} from './Header.styles';
+
+const Header = ({headerRef}) => {
+  const theme = useTheme();
+  return (
+    <StyledHeader ref={headerRef} theme={theme}>
+      <HeaderNavigation />
+      <StyledHeaderWrapper>
+        <StyledHeaderLeftWrapper />
+        <StyledHeaderContentWrapper>
+          <StyledHeaderContent>
+            <HeaderContentContainer>
+              <HeaderMenuButton />
+            </HeaderContentContainer>
+            <HeaderContentContainer>
+              <HeaderDarkMode />
+              <HeaderLinks />
+            </HeaderContentContainer>
+          </StyledHeaderContent>
+          <HeaderLogo />
+        </StyledHeaderContentWrapper>
+      </StyledHeaderWrapper>
+    </StyledHeader>
+  );
+};
 
 export default Header;

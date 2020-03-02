@@ -1,11 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import './Wrapper.scss';
+const StyledWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  padding-top: var(--header-height);
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+`;
 
 const Wrapper = ({children}) => (
-  <header className='app-wrapper'>
+  <StyledWrapper>
     {children}
-  </header>
+  </StyledWrapper>
 );
 
 Wrapper.propTypes = {};

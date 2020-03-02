@@ -18,6 +18,15 @@ export interface EmblemUIThemeBorder {
   width: string;
 }
 
+export interface EmblemUIThemeBackground {
+  primary: string;
+  secondary: string;
+}
+
+export interface EmblemUIThemeApp {
+  background: EmblemUIThemeBackground;
+}
+
 export interface EmblemUITheme {
   border: EmblemUIThemeBorder,
   boxShadow: EmblemUIThemeBoxShadow;
@@ -29,4 +38,5 @@ export interface EmblemUITheme {
   palette: EmblemUIThemePalette;
   switch: EmblemUIThemeCheckboxStyles;
   transitionTime: string;
+  app: EmblemUIThemeApp;
 }

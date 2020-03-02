@@ -3,17 +3,18 @@ import {Button} from '@emblem-ui/core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import useApp from '../../hooks/useApp';
+import {StyledHeaderIcon, StyledHeaderMenuButton} from './Header.styles';
 
 const HeaderMenuButton = () => {
   const {toggleIsMenuOpen} = useApp();
   return (
-    <div className='app-header__menu-button'>
+    <StyledHeaderMenuButton>
       <Button elementColor='dark' elementStyle='subtle' onClick={toggleIsMenuOpen} elementSize='large'>
-        <div className='app-header__icon'>
+        <StyledHeaderIcon>
           <FontAwesomeIcon icon='bars' />
-        </div>
+        </StyledHeaderIcon>
       </Button>
-    </div>
+    </StyledHeaderMenuButton>
   );
 };
 
