@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, ButtonGroup} from '@emblem-ui/core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import ElementWrapper from '../components/ElementWrapper';
 
@@ -138,6 +139,43 @@ const buttons = () => {
             </ElementWrapper>
           );
         })}
+      </ElementWrapper>
+
+      <ElementWrapper>
+        <ElementWrapper>
+          <Button>
+            <div style={{width: 16, height: 16, marginRight: '0.8rem'}}>
+              <FontAwesomeIcon icon={['far', 'sun']} />
+            </div>
+            Morning
+          </Button>
+        </ElementWrapper>
+        <ElementWrapper>
+          <Button elementStyle='dashed'>
+            <div style={{width: 16, height: 16, marginRight: '0.8rem'}}>
+              <FontAwesomeIcon icon='shield-alt' />
+            </div>
+            Defend
+          </Button>
+        </ElementWrapper>
+        <ElementWrapper>
+          <div style={{width: 150}}>
+            <Button>
+              Open very long labeled button
+              <div style={{width: 16, height: 16, marginLeft: '0.8rem'}}>
+                <FontAwesomeIcon icon='chevron-down' />
+              </div>
+            </Button>
+          </div>
+        </ElementWrapper>
+      </ElementWrapper>
+
+      <ElementWrapper>
+        <div style={{width: '100%', margin: 4}}>
+          <Button block>
+            Block
+          </Button>
+        </div>
       </ElementWrapper>
 
       <ElementWrapper>

@@ -6,16 +6,17 @@ import {StyledButton, StyledChildren} from './Button.styles';
 import {ButtonStyle, ElementColor, ElementSize} from '../../interface/element.interface';
 
 interface Button extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  block?: boolean;
   children: React.ReactNode;
   elementStyle?: ButtonStyle;
   elementColor?: ElementColor;
   elementSize?: ElementSize;
   disabled?: boolean;
   loading?: boolean;
-  outline?: boolean;
 }
 
 const Button: React.FC<Button> = ({
+  block = false,
   children,
   elementStyle = 'default',
   elementColor = 'primary',
@@ -27,6 +28,7 @@ const Button: React.FC<Button> = ({
   const theme: EmblemUITheme = useTheme();
   return (
     <StyledButton
+      block={block}
       disabled={disabled || loading}
       elementColor={elementColor}
       elementSize={elementSize}

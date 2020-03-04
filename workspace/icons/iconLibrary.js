@@ -10,12 +10,14 @@ import {
 
 import {
   faBars,
+  faChevronDown,
   faCoffee,
   faShieldAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faBars,
+  faChevronDown,
   faCoffee,
   faGithub,
   faMoon,

@@ -12,6 +12,10 @@ interface StyledChildren {
 }
 
 export const StyledChildren = styled.span<StyledChildren>`
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  
   opacity: ${(props: StyledChildren) => (props.isLoading ? 0 : 1)};
   white-space: nowrap;
   user-select: none;
@@ -19,6 +23,7 @@ export const StyledChildren = styled.span<StyledChildren>`
 `;
 
 interface StyledButton {
+  readonly block: boolean;
   readonly disabled: boolean;
   readonly elementColor: ElementColor;
   readonly elementSize: ElementSize;
@@ -40,6 +45,12 @@ export const StyledButton = styled.button<StyledButton>`
     width: 100%;
     border-radius: ${(props: StyledButton) => props.theme.boxShadow.radius};
   }
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: ${(props: StyledButton) => props.block && '100%'};
   
   border-radius: ${(props: StyledButton) => props.theme.border.radius};
 
