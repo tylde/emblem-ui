@@ -1,6 +1,6 @@
-import {EmblemUIThemeColor} from '../palette.interface';
+import {EmblemUIThemePaletteColor} from '../../../interface/palette.interface';
 
-const secondary: EmblemUIThemeColor = {
+const secondary: EmblemUIThemePaletteColor = {
   shadow: 'rgba(86,93,101,0.5)',
   lightest: '#c9d5e2',
   light: '#b2bbc3',

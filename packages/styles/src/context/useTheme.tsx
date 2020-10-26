@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 
-import {EmblemUITheme} from '../theme/theme.interface';
+import {EmblemUITheme} from '../theme/interface/theme.interface';
 
 import ThemeContext from './ThemeContext';
 

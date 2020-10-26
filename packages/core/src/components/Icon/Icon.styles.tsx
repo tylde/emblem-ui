@@ -59,10 +59,10 @@ export const IconCheck = styled.span<IconIcon>`
     background: transparent;
     transform-origin: top left;
     transform: rotate(-45deg);
-    border-bottom-color: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    border-bottom-color: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     border-bottom-style: solid;
     border-bottom-width: calc((2 * ${(props: IconIcon) => props.theme.checkbox.base}) / 16);
-    border-left-color: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    border-left-color: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     border-left-style: solid;
     border-left-width: calc((2 * ${(props: IconIcon) => props.theme.checkbox.base}) / 16);
   }
@@ -76,7 +76,7 @@ export const IconMinus = styled.span<IconIcon>`
   &::after {
     ${icon};
     ${iconDimensions(10, 2, 8, 4)};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     transform-origin: top left;
   }
 `;
@@ -88,7 +88,7 @@ export const IconPlus = styled.span<IconIcon>`
   
   &::before, &::after {
     ${icon};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
   }
     
   &::before {
@@ -107,7 +107,7 @@ export const IconCross = styled.span<IconIcon>`
   
   &::before, &::after {
     ${icon};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     transform-origin: center;
     transform: rotate(45deg);
   }
@@ -129,7 +129,7 @@ export const IconSlash = styled.span<IconIcon>`
   &::after {
     ${icon};
     ${iconDimensions(2, 12, 3, 8)};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     transform-origin: center;
     transform: rotate(45deg);
   }
@@ -143,7 +143,7 @@ export const IconSquare = styled.span<IconIcon>`
   &::after {
     ${icon};
     ${iconDimensions(6, 6, 6, 6)};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
   }
 `;
 
@@ -155,7 +155,7 @@ export const IconCircle = styled.span<IconIcon>`
   &::after {
     ${icon};
     ${iconDimensions(8, 8, 5, 5)};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     border-radius: 100%;
   }
 `;
@@ -168,7 +168,7 @@ export const IconDiamond = styled.span<IconIcon>`
   &::after {
     ${icon};
     ${iconDimensions(6, 6, 6, 6)};
-    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.disabled.border : '#fff')};
+    background: ${(props: IconIcon) => (props.isDisabled ? props.theme.palette.disabled.border : '#fff')};
     transform-origin: center;
     transform: rotate(45deg);
   }

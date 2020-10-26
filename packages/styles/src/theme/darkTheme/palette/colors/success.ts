@@ -1,6 +1,6 @@
-import {EmblemUIThemeColor} from '../palette.interface';
+import {EmblemUIThemePaletteColor} from '../../../interface/palette.interface';
 
-const success: EmblemUIThemeColor = {
+const success: EmblemUIThemePaletteColor = {
   shadow: 'rgba(39,174,96,0.5)',
   lightest: '#E9F7EF',
   light: '#A9DFBF',
@@ -8,7 +8,7 @@ const success: EmblemUIThemeColor = {
   medium: '#22914c',
   dark: '#196F3D',
   fontColor: '#FFF',
-  outlineFontColor: '#27AE60'
+  outlineFontColor: 'rgba(255, 255, 255, 0.87)'
 };
 
 export default success;

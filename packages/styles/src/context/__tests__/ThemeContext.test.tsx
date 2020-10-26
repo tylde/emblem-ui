@@ -5,7 +5,7 @@ import expect from 'expect';
 import ThemeContext from '../ThemeContext';
 import useTheme from '../useTheme';
 import {EmblemUITheme} from '../..';
-import defaultTheme from '../../theme/defaultTheme';
+import defaultTheme from '../../theme/lightTheme/defaultTheme';
 
 const primaryBase: string = defaultTheme.palette.primary.base;
 

@@ -2,7 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-
+### Added
+- [styles] `ThemeProvider` component
 
 ## [0.1.1] - 2020-05-24
 ### Added

@@ -14,9 +14,10 @@ interface FormRow extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const FormRow: React.FC<FormRow> = ({
-  children
+  children,
+  ...props
 }) => (
-  <StyledFormRow>
+  <StyledFormRow {...props}>
     {children}
   </StyledFormRow>
 );

@@ -26,7 +26,7 @@ export const StyledInput = styled.input<StyledInput>`
   
   border-width: 1px;
   border-style: solid;
-  border-color: ${(props: StyledInput) => props.theme.border.color};
+  border-color: ${(props: StyledInput) => props.theme.palette.border.color};
   border-color: ${(props: StyledInput) => props.isInfo && props.theme.palette.info.base};
   border-color: ${(props: StyledInput) => props.isSuccess && props.theme.palette.success.base};
   border-color: ${(props: StyledInput) => props.isWarning && props.theme.palette.warning.base};
@@ -34,7 +34,7 @@ export const StyledInput = styled.input<StyledInput>`
 
   &:enabled {
     &:hover {
-      border-color: ${(props: StyledInput) => props.theme.border.hover}
+      border-color: ${(props: StyledInput) => props.theme.palette.border.hover}
     }
     
     &:focus {

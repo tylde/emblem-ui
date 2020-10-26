@@ -1,6 +1,6 @@
-import {EmblemUIThemeColor} from '../palette.interface';
+import {EmblemUIThemePaletteColor} from '../../../interface/palette.interface';
 
-const danger: EmblemUIThemeColor = {
+const danger: EmblemUIThemePaletteColor = {
   shadow: 'rgba(231,76,60,0.5)',
   lightest: '#FDEDEC',
   light: '#F5B7B1',
@@ -8,7 +8,7 @@ const danger: EmblemUIThemeColor = {
   medium: '#c24335',
   dark: '#943126',
   fontColor: '#FFF',
-  outlineFontColor: '#E74C3C'
+  outlineFontColor: 'rgba(255, 255, 255, 0.87)'
 };
 
 export default danger;

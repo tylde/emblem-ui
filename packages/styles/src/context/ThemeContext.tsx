@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {EmblemUITheme} from '../theme/theme.interface';
+import {EmblemUITheme} from '../theme/interface/theme.interface';
 
-import defaultTheme from '../theme/defaultTheme';
+import defaultLightTheme from '../theme/lightTheme/defaultLightTheme';
 
-const ThemeContext = React.createContext<EmblemUITheme>(defaultTheme);
+const ThemeContext = React.createContext<EmblemUITheme>(defaultLightTheme);
 
 export default ThemeContext;

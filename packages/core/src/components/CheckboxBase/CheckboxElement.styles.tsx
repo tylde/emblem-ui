@@ -77,7 +77,7 @@ export const SwitchBar = styled.span<SwitchBar>`
   width: 70%;
   height: 50%;
   border-radius: ${(props: SwitchBar) => props.theme.border.radius};
-  background: ${(props: SwitchBar) => props.theme.border.color};
+  background: ${(props: SwitchBar) => props.theme.palette.border.color};
   pointer-events: none;
 `;
 
@@ -123,8 +123,8 @@ export const CheckboxElementInput = styled.input<CheckboxElementInput>`
   &:disabled {
     cursor: initial;
     & + span {
-      background: ${(props: CheckboxElementInput) => props.theme.disabled.background};
-      box-shadow: inset 0 0 0 1px ${(props: CheckboxElementInput) => props.theme.disabled.border};
+      background: ${(props: CheckboxElementInput) => props.theme.palette.disabled.background};
+      box-shadow: inset 0 0 0 1px ${(props: CheckboxElementInput) => props.theme.palette.disabled.border};
     }
   }
 `;
@@ -138,7 +138,7 @@ export const CheckboxBullet = styled.span<CheckboxBullet>`
   pointer-events: none;
 
   box-shadow: inset 0 0 0 1px ${(props: CheckboxBullet) => (
-    props.checked ? props.theme.palette[props.elementColor].base : props.theme.border.color
+    props.checked ? props.theme.palette[props.elementColor].base : props.theme.palette.border.color
   )};
   border-radius: ${(props: CheckboxBullet) => props.theme.border.radius};
   
@@ -155,7 +155,7 @@ export const SwitchBullet = styled.span<SwitchBullet>`
   pointer-events: none;
 
   box-shadow: inset 0 0 0 1px ${(props: SwitchBullet) => (
-    props.checked ? props.theme.palette[props.elementColor].base : props.theme.border.color
+    props.checked ? props.theme.palette[props.elementColor].base : props.theme.palette.border.color
   )};
   border-radius: ${(props: SwitchBullet) => props.theme.border.radius};
   

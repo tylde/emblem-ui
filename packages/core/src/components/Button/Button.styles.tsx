@@ -4,7 +4,7 @@ import {EmblemUITheme} from '@emblem-ui/styles';
 import {ButtonStyle, ElementColor, ElementSize} from '../../interface/element.interface';
 
 const isAlternateButton = (elementStyle: ButtonStyle): boolean => elementStyle !== 'default';
-const isBorderedButton = (elementStyle: ButtonStyle): boolean => ['outline', 'dashed'].includes(elementStyle);
+const isBorderedButton = (elementStyle: ButtonStyle): boolean => (['outline', 'dashed'].indexOf(elementStyle) > -1);
 const isSubtleButton = (elementStyle: ButtonStyle): boolean => elementStyle === 'subtle';
 
 interface StyledChildren {
@@ -56,18 +56,18 @@ export const StyledButton = styled.button<StyledButton>`
 
   background: ${(props: StyledButton) => props.theme.palette[props.elementColor].base};
   background: ${(props: StyledButton) => isAlternateButton(props.elementStyle) && 'transparent'};
-  background: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.disabled.background};
+  background: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.palette.disabled.background};
   
   border-width: 1px;
   border-style: solid;
   border-style: ${(props: StyledButton) => props.elementStyle === 'dashed' && 'dashed'};
   border-color: ${(props: StyledButton) => props.theme.palette[props.elementColor].base};
   border-color: ${(props: StyledButton) => isSubtleButton(props.elementStyle) && 'transparent'};
-  border-color: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.disabled.border};
+  border-color: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.palette.disabled.border};
 
   color: ${(props: StyledButton) => props.theme.palette[props.elementColor].fontColor};
   color: ${(props: StyledButton) => isAlternateButton(props.elementStyle) && props.theme.palette[props.elementColor].outlineFontColor};
-  color: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.disabled.color};
+  color: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.palette.disabled.color};
   
   
   cursor: pointer;
