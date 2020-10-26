@@ -4,6 +4,11 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tylde/emblem-ui.git"
+  },
+  "author": "Mateusz Kalinowski <mr.mkalinowski@gmail.com>",
   "license": "MIT",
   "sideEffects": false,
   "files": [
