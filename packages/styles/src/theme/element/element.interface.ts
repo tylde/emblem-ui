@@ -26,3 +26,7 @@ export interface EmblemUIThemeCheckboxStyles {
 export interface EmblemUIThemeSwitchStyles {
   base: string;
 }
+
+export interface EmblemUIThemeTableStyles {
+  height: EmblemUIThemeHeight;
+}

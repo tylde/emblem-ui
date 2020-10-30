@@ -15,6 +15,8 @@ export interface EmblemUIThemePaletteBackground {
 }
 
 export interface EmblemUIThemePaletteBorder {
+  lightest: string;
+  light: string;
   color: string,
   hover: string;
 }

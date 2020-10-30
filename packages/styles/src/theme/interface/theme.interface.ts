@@ -2,9 +2,10 @@ import {
   EmblemUIThemeButtonStyles,
   EmblemUIThemeCheckboxStyles,
   EmblemUIThemeInputStyles,
-  EmblemUIThemeLoaderStyles
+  EmblemUIThemeLoaderStyles, EmblemUIThemeTableStyles
 } from '../element/element.interface';
 import {EmblemUIThemePalette} from './palette.interface';
+import {EmblemUIThemeFont} from '../font/font.interface';
 
 export interface EmblemUIThemeBoxShadow {
   radius: string;
@@ -21,9 +22,11 @@ export interface EmblemUITheme {
   boxShadow: EmblemUIThemeBoxShadow;
   button: EmblemUIThemeButtonStyles;
   checkbox: EmblemUIThemeCheckboxStyles;
+  font: EmblemUIThemeFont;
   input: EmblemUIThemeInputStyles;
   loader: EmblemUIThemeLoaderStyles;
   palette: EmblemUIThemePalette;
   switch: EmblemUIThemeCheckboxStyles;
+  table: EmblemUIThemeTableStyles;
   transitionTime: string;
 }
