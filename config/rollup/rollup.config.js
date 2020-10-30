@@ -10,6 +10,7 @@ import {terser} from 'rollup-plugin-terser';
 import Styles from '../../packages/styles/package.json';
 import Core from '../../packages/core/package.json';
 import Form from '../../packages/form/package.json';
+import Data from '../../packages/data/package.json';
 
 const getConfiguration = (pkg, env, target) => {
   const isProduction = env === 'production';
@@ -102,5 +103,6 @@ const createConfiguration = pkg => {
 export default [
   ...createConfiguration(Styles),
   ...createConfiguration(Core),
-  ...createConfiguration(Form)
+  ...createConfiguration(Form),
+  ...createConfiguration(Data)
 ];
