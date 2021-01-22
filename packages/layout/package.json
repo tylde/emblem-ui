@@ -1,0 +1,25 @@
+{
+  "name": "@emblem-ui/layout",
+  "version": "0.2.0",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tylde/emblem-ui.git"
+  },
+  "author": "Mateusz Kalinowski <mr.mkalinowski@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@emblem-ui/styles": "0.2.0",
+    "styled-components": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

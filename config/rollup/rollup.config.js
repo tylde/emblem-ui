@@ -9,6 +9,7 @@ import {terser} from 'rollup-plugin-terser';
 
 import Styles from '../../packages/styles/package.json';
 import Core from '../../packages/core/package.json';
+import Layout from '../../packages/layout/package.json';
 import Form from '../../packages/form/package.json';
 import Data from '../../packages/data/package.json';
 
@@ -103,6 +104,7 @@ const createConfiguration = pkg => {
 export default [
   ...createConfiguration(Styles),
   ...createConfiguration(Core),
+  ...createConfiguration(Layout),
   ...createConfiguration(Form),
   ...createConfiguration(Data)
 ];
