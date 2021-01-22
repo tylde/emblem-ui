@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
+- [layout] `Card` component
+
+## [0.2.0] - 2021-01-22
+### Added
 - [styles] `ThemeProvider` component
 - [data] `Table` component
 - [data] `TableScroll` component

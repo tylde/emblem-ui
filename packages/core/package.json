@@ -1,6 +1,6 @@
 {
   "name": "@emblem-ui/core",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -15,8 +15,12 @@
     "dist/"
   ],
   "dependencies": {
-    "@emblem-ui/styles": "0.1.1",
-    "styled-components": "^5.0.0"
+    "@emblem-ui/styles": "0.2.0",
+    "styled-components": "5.1.0"
+  },
+  "devDependencies": {
+    "enzyme": "3.11.0",
+    "expect": "26.6.1"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

@@ -1,6 +1,6 @@
 {
   "name": "@emblem-ui/form",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@emblem-ui/core": "0.1.1",
+    "@emblem-ui/core": "0.2.0",
     "styled-components": "^5.0.0"
   },
   "peerDependencies": {
