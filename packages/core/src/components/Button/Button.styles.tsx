@@ -69,6 +69,7 @@ export const StyledButton = styled.button<StyledButton>`
   color: ${(props: StyledButton) => isAlternateButton(props.elementStyle) && props.theme.palette[props.elementColor].outlineFontColor};
   color: ${(props: StyledButton) => (props.disabled && !props.loading) && props.theme.palette.disabled.color};
   
+  font-family: ${(props: StyledButton) => props.theme.font.default};
   
   cursor: pointer;
   height: ${(props: StyledButton) => props.theme.button.height[props.elementSize]};

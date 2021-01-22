@@ -154,7 +154,7 @@ interface StyledTableCellText {
 
 export const StyledTableCellText = styled.span<StyledTableCellText>`
   margin-top: 1px;
-  font-family: ${(props: StyledTableCellText) => props.theme.font.family};
+  font-family: ${(props: StyledTableCellText) => props.theme.font.default};
   
   white-space: nowrap;
   overflow: hidden;

@@ -1,3 +1,4 @@
 export interface EmblemUIThemeFont {
-  family: string;
+  default: string;
+  monospace: string;
 }

@@ -35,4 +35,6 @@ interface StyledLabelText {
 export const StyledLabelText = styled.span<StyledLabelText>`
   user-select: ${(props: StyledLabelText) => (props.userSelect ? 'inherit' : 'none')};
   color: ${(props: StyledLabelText) => props.disabled && '#767676'};
+  font-family: ${(props: StyledLabelText) => props.theme.font.default};
+  font-size: 14px;
 `;

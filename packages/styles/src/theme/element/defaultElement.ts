@@ -1,7 +1,7 @@
 import {EmblemUIThemeHeight} from './element.interface';
 
 export const defaultElementHeight: EmblemUIThemeHeight = {
-  small: '24px',
-  default: '32px',
-  large: '40px'
+  small: '28px',
+  default: '36px',
+  large: '44px'
 };

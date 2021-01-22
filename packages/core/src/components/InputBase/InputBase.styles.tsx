@@ -20,6 +20,7 @@ export const StyledInput = styled.input<StyledInput>`
   width: 100%;
   border-radius: ${(props: StyledInput) => props.theme.border.radius};
   font-size: 14px;
+  font-family: ${(props: StyledInput) => props.theme.font.default};
   padding: 0 ${(props: StyledInput) => props.theme.input.horizontalPadding};
   height: ${(props: StyledInput) => props.theme.input.height[props.elementSize]};
   background: transparent;
